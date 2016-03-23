@@ -2,21 +2,17 @@
 #include "date.h"
 
 Date::Date(int d, int m, int y) {
-//  Set Year
   setYear(y);
-// Set Month
   if (m < 0 || m > 12) {
     m = 1;
   }
   setMonth(m);
-//  Set Day
   if (d < 0) {
     d = 1;
   } else if (d > monthDays(m)) {
     d = monthDays(m);
   }
   setDay(d);
-
 }
 
 void Date::setDay(int d) {
